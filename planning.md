@@ -239,6 +239,18 @@ Short passages provide limited information for both detectors. Stylometric featu
 ```
 
 
+## AI Tool Plan
+
+AI coding tools will be used for code generation in Milestones 3, 4, and 5. In each case, specific sections of this planning document and the architecture diagram will be provided as input so that the generated code reflects the agreed-upon design rather than the tool's defaults.
+
+- **Milestone 3:** Provide the *Detection Signals* section and the *Submission Flow* architecture diagram. Ask the tool to generate the Flask application skeleton, the `POST /submit` endpoint with input validation, and the Groq API integration returning a score between 0.0 and 1.0.
+- **Milestone 4:** Provide the *Detection Signals*, *Uncertainty Representation*, and *architecture diagram* sections. Ask the tool to generate the stylometric analysis module, the normalized score conversion function, and the confidence scoring logic that applies the defined thresholds and the agreement rule.
+- **Milestone 5:** Provide the *Transparency Label Design*, *Appeals Workflow*, and *architecture diagram* sections. Ask the tool to generate the label mapping function, the `POST /appeal` endpoint, and the audit log update logic.
+
+In all cases, generated output will be reviewed against the spec before use — specifically checking that function signatures match expected score formats, thresholds match the defined ranges, and endpoint contracts match the architecture diagram.
+
+---
+
 # Milestone 3 (Submission Endpoint + First Signal)
 
 For Milestone 3, I will provide the AI coding tool with the **Detection Signals** section and the **architecture diagram** from my planning document. These sections describe the purpose of the Groq-based classifier, the expected score format (0.0–1.0), and how the submission endpoint fits into the overall system architecture.
